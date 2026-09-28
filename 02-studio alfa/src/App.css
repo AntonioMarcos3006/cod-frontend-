@@ -129,3 +129,11 @@ background-color: var(--cor-botao);
   box-shadow: 2px 5px 0 0 black;
 }
 
+.card img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+
