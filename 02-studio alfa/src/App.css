@@ -3,7 +3,7 @@
   --cor-botao: #000;
   --padding--: 0.5px;
   --margin--: 0.6px;
-  /* Border Radius*/
+  /* Border Radius */
   --raio-pequeno: 6px;
   --raio-grande: 8px;
 }
@@ -17,16 +17,20 @@
 body {
   background-color: var(--cor-fundo);
   font-family: system-ui, -apple-system, sans-serif;
+  color: #111827;
 }
 
+/* --- HEADER CENTRALIZADO --- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
   border-bottom: 1px solid #e5e7eb;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
 }
-
 
 .logoD {
   display: flex;
@@ -65,19 +69,22 @@ header {
   border-radius: 8px;
   color: #000;
   font-weight: 500;
-}
-.navigation li:last-child a:hover{
-   transform: translateY(-4px) translateX(-2px);
-  box-shadow: 2px 5px 0 0 black;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
+.navigation li:last-child a:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* --- SEÇÃO PRINCIPAL (HERO) --- */
 .Titulo {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   text-align: center;
   margin-top: 60px;
+  color: #111827;
 }
 
 .Descrição {
@@ -99,111 +106,121 @@ header {
 
 .botoes a {
   padding: 10px 20px;
-  border-radius: 10rem;
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: opacity 0.2s, background-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-decoration: none;
 }
 
 .btn-orçamento {
-background-color: var(--cor-botao);
+  background-color: var(--cor-botao);
   color: #fff;
   border: 1px solid var(--cor-botao);
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  text-decoration: none;
 }
 
 .btn-orçamento:hover {
- transform: translateY(-4px) translateX(-2px);
-  box-shadow: 2px 5px 0 0 rgb(161, 159, 159);
+  background-color: #1f2937;
+  border-color: #1f2937;
 }
 
-
 .btn-portifolio {
-  background-color: transparent;
+  background-color: #fff;
   color: #000;
   border: 1px solid #d1d5db;
-  text-decoration: none;
 }
 
 .btn-portifolio:hover {
- transform: translateY(-4px) translateX(-2px);
-  box-shadow: 2px 5px 0 0 black;
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* --- SEÇÃO DE SERVIÇOS CENTRALIZADA --- */
+.servico {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.servico h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  width: 100%;
+  padding: 28px 24px;
+  background-color: #f9fafb;
+  border: none;
+  border-radius: var(--raio-grande);
 }
 
 .card img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-    margin-bottom: 8px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
-.servicos-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.servico{
-  padding: 60px 0;
-  max-width: 1100px;
-}
-
-.servico h2{
-  font-size: 22px;
-  color: #111;
-  margin-bottom: 32px;
-}
-
-.card{
-  max-width: 300px;
-  padding: 24px;
-  border: 1px solid #b8b7b7;
-  border-radius: var(--raio-grande);
-  gap: 22px;
-}
-
-.card h3{
-  font-size: 16px;
-  color:#111;
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
   margin-bottom: 8px;
 }
 
-.card p{
-  font-size:  14px;
-  color: #666;
+.card p {
+  font-size: 0.875rem;
+  color: #4b5563;
   line-height: 1.5;
 }
 
-.footer{
-  border-top: 1px solid #b2b3b4;
+/* --- RODAPÉ CENTRALIZADO --- */
+.footer {
+  border-top: 1px solid #e5e7eb;
   padding: 24px 0;
+  margin-top: 40px;
+  width: 100%;
 }
-.footer-container{
- max-width: 1100px;
-  margin:0 auto;
-  padding: 0 24px;
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
-.footer span{
-  font-size: 14px;
-  color: #665
+
+.footer span {
+  font-size: 0.875rem;
+  color: #6b7280;
 }
-.footer-icons{
+
+.footer-icons {
   display: flex;
   gap: 16px;
 }
 
-.footer-icons a{
-  font-size: 18px;
+.footer-icons a {
+  font-size: 1.1rem;
   text-decoration: none;
-  color:#555;
+  color: #4b5563;
   transition: color 0.2s;
 }
-.footer-icons a:hover{
-  color:#000;
+
+.footer-icons a:hover {
+  color: #111827;
 }
