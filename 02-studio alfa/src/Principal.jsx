@@ -22,7 +22,7 @@ function Principal() {
           </a>
         </div>
       </section>
-      <section className="section-2">
+      <section className="servico">
         <h2>Nossos serviços</h2>
 
         <div class="servicos-grid">
