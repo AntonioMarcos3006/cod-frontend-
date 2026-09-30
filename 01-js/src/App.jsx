@@ -3,7 +3,13 @@ import './App.css'
 
 function App() {
   const [mostrar, setmostrar] = useState(false)
-  
+  const [resultado, setResultado] = useState(0)
+
+   function calcularDobro(){
+    let numero = Number(prompt("Digite o número A-GO-RA: "))
+    let dobrar = numero * 2
+    setResultado(dobrar)
+   } 
   function easteregg(){
     setmostrar(!mostrar)
   }
@@ -214,7 +220,11 @@ function App() {
       <h1>Javascript no React</h1>
 <hr />
     <h2>Usando estados</h2>
-      <button>Estados - dobro</button>
+      <button onClick={calcularDobro}>Estados - dobro</button>
+
+      <p>
+        Resultado da operação: {resultado}
+      </p>
     <hr />
 
       <h2>Exercicios supimpas</h2>
