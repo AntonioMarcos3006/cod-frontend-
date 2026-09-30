@@ -212,6 +212,10 @@ function App() {
   return (
     <div className="cont-app">
       <h1>Javascript no React</h1>
+<hr />
+    <h2>Usando estados</h2>
+      <button>Estados - dobro</button>
+    <hr />
 
       <h2>Exercicios supimpas</h2>
 
