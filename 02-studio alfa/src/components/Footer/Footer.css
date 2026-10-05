@@ -1,0 +1,38 @@
+/* --- RODAPÉ CENTRALIZADO --- */
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 24px 0;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer span {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-icons a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #4b5563;
+  transition: color 0.2s;
+}
+
+.footer-icons a:hover {
+  color: #111827;
+}

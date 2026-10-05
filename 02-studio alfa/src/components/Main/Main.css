@@ -1,0 +1,108 @@
+/* --- SEÇÃO PRINCIPAL (HERO) --- */
+.Titulo {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-top: 60px;
+  color: #111827;
+}
+
+.Descrição {
+  color: #4b5563;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 16px auto 0;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; 
+  margin-top: 28px;
+}
+
+.botoes a {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.btn-orçamento {
+  background-color: var(--cor-botao);
+  color: #fff;
+  border: 1px solid var(--cor-botao);
+}
+
+.btn-orçamento:hover {
+  background-color: #1f2937;
+  border-color: #1f2937;
+}
+
+.btn-portifolio {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #d1d5db;
+}
+
+.btn-portifolio:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* --- SEÇÃO DE SERVIÇOS CENTRALIZADA --- */
+.servico {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.servico h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  width: 100%;
+  padding: 28px 24px;
+  background-color: #f9fafb;
+  border: none;
+  border-radius: var(--raio-grande);
+}
+
+.card img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.5;
+}

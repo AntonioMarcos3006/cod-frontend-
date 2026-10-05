@@ -1,9 +1,9 @@
-import "./App.css";
-import Foguete from "../Imagens section/foguete-inclinado.png";
-import Aplicativos from "../Imagens section/aplicativos.png"
-import Smartphone from "../Imagens section/smartphone.png"
+import "./Main.css";
+import Foguete from "../../../Imagens section/foguete-inclinado.png";
+import Aplicativos from "../../../Imagens section/aplicativos.png";
+import Smartphone from "../../../Imagens section/smartphone.png";
 
-function Principal() {
+function Main() {
   return (
     <main>
       <section className="section-1">
@@ -48,4 +48,4 @@ function Principal() {
     </main>
   );
 }
-export default Principal;
+export default Main;
