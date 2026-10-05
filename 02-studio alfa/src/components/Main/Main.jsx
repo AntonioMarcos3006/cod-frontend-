@@ -4,6 +4,27 @@ import Aplicativos from "../../../Imagens section/aplicativos.png";
 import Smartphone from "../../../Imagens section/smartphone.png";
 import ServicoCard from "../ServicoCard/ServicoCard";
 
+const servico = [
+    { 
+        id: 1, 
+        titulo: "Design de interface", 
+        imagem: Aplicativos, 
+        descricao: "Telas claras, pensadas para o usuário"
+    },
+    { 
+        id: 2, 
+        titulo: "Responsividade", 
+        imagem: Smartphone, 
+        descricao: "O mesmo site em qualquer tela"
+    },
+    { 
+        id: 3, 
+        titulo: "Performance", 
+        imagem: Foguete, 
+        descricao: "Páginas leves que carregam rápido"
+    }
+];
+
 function Main() {
   return (
     <main>
@@ -27,9 +48,14 @@ function Main() {
         <h2>Nossos serviços</h2>
 
         <div className="servicos-grid">
-            <ServicoCard titulo={"Design de interface"} imagem={Aplicativos} descricao={"Telas claras, pensadas para o usuário"} />
-            <ServicoCard titulo={"Responsividade"} imagem={Smartphone} descricao={"O mesmo site em qualquer tela"} />
-            <ServicoCard titulo={"Performance"} imagem={Foguete} descricao={"Páginas leves que carregam rápido"} />
+           {servico.map((servico) => (
+            <ServicoCard
+              key={servico.id}
+              titulo={servico.titulo}
+              imagem={servico.imagem}
+              descricao={servico.descricao}
+            />
+          ))}
         </div>
       </section>
     </main>
