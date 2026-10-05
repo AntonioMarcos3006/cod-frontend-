@@ -2,6 +2,7 @@ import "./Main.css";
 import Foguete from "../../../Imagens section/foguete-inclinado.png";
 import Aplicativos from "../../../Imagens section/aplicativos.png";
 import Smartphone from "../../../Imagens section/smartphone.png";
+import ServicoCard from "../ServicoCard/ServicoCard";
 
 function Main() {
   return (
@@ -25,24 +26,10 @@ function Main() {
       <section className="servico">
         <h2>Nossos serviços</h2>
 
-        <div class="servicos-grid">
-          <div class="card">
-            <img src={Aplicativos} alt="Design de interface" />
-            <h3>Design de interface</h3>
-            <p>Telas claras, pensadas para o usuário.</p>
-          </div>
-
-          <div class="card">
-            <img src={Smartphone} alt="Responsividade" />
-            <h3>Responsividade</h3>
-            <p>O mesmo site em qualquer tela.</p>
-          </div>
-
-          <div class="card">
-            <img src={Foguete} alt="Performance" />
-            <h3>Performance</h3>
-            <p>Páginas leves que carregam rápido.</p>
-          </div>
+        <div className="servicos-grid">
+            <ServicoCard titulo={"Design de interface"} imagem={Aplicativos} descricao={"Telas claras, pensadas para o usuário"} />
+            <ServicoCard titulo={"Responsividade"} imagem={Smartphone} descricao={"O mesmo site em qualquer tela"} />
+            <ServicoCard titulo={"Performance"} imagem={Foguete} descricao={"Páginas leves que carregam rápido"} />
         </div>
       </section>
     </main>

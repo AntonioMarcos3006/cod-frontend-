@@ -79,30 +79,4 @@
   gap: 24px;
 }
 
-.card {
-  width: 100%;
-  padding: 28px 24px;
-  background-color: #f9fafb;
-  border: none;
-  border-radius: var(--raio-grande);
-}
 
-.card img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 8px;
-}
-
-.card p {
-  font-size: 0.875rem;
-  color: #4b5563;
-  line-height: 1.5;
-}
