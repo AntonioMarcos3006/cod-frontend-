@@ -9,7 +9,10 @@ import Ganso from './components/Ganso'
 import Ganso2 from './components/Ganso2'
 import Mistica from './components/Mistica'
 import Eventos from './components/Eventos'
-
+import Palco from './components/Palco'
+import Transporte from './components/Transporte'  
+import Cracha from './components/Cracha'
+import Visitante from './components/Visitante'
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
     <Ganso2 />
     <Mistica />
     <Eventos />
+    <Palco />
+    <Transporte />
+    <Cracha />
+    <Visitante />
 
     <hr />
 
