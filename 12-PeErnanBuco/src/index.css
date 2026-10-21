@@ -1,111 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --night: #0b0d24;
+  --night-2: #151837;
+  --gold: #e8c872;
+  --gold-light: #fff1c9;
+  --gold-deep: #b98a2c;
+  --gold-soft: rgba(232, 200, 114, 0.35);
+  --parchment: #efe6d2;
+  --muted: #b9b3c9;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --display: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
+  font-family: var(--serif);
+  color: var(--parchment);
+  color-scheme: dark;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+html {
+  background: var(--night);
 }
 
 body {
   margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(120, 100, 220, 0.35), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 85% 100%, rgba(232, 200, 114, 0.12), transparent 70%),
+    linear-gradient(180deg, var(--night-2), var(--night) 70%);
+  background-attachment: fixed;
+}
+
+/* Raios de luz girando lentamente atrás do conteúdo */
+body::before {
+  content: '';
+  position: fixed;
+  top: -40vmax;
+  left: 50%;
+  width: 120vmax;
+  height: 120vmax;
+  margin-left: -60vmax;
+  z-index: -2;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 233, 170, 0.07) 0deg 6deg,
+    transparent 6deg 24deg
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0%, transparent 55%);
+  mask-image: radial-gradient(circle at 50% 50%, #000 0%, transparent 55%);
+  animation: rays 120s linear infinite;
+}
+
+/* Estrelinhas */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 22%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 68% 14%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1.5px 1.5px at 84% 62%, rgba(255, 240, 200, 0.8), transparent),
+    radial-gradient(1px 1px at 30% 78%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 52% 44%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 92% 90%, rgba(255, 255, 255, 0.7), transparent);
+  background-size: 520px 520px;
+  animation: twinkle 6s ease-in-out infinite alternate;
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  width: 100%;
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  text-align: center;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+::selection {
+  background: var(--gold);
+  color: var(--night);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+@keyframes rays {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes twinkle {
+  from { opacity: 0.55; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
 }
